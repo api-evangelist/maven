@@ -1,0 +1,63 @@
+name: Maven Central Repository
+description: Maven Central is the default repository for Maven, serving as the primary source for Java libraries and artifacts
+image: https://maven.apache.org/images/maven-logo-black-on-white.png
+url: https://maven.apache.org
+created: '2024'
+modified: '2024'
+apis:
+- name: Maven Central Search API
+  description: REST API for searching and retrieving artifact information from Maven Central Repository
+  image: https://maven.apache.org/images/maven-logo-black-on-white.png
+  humanURL: https://central.sonatype.com/
+  baseURL: https://search.maven.org/solrsearch
+  tags:
+  - artifacts
+  - dependencies
+  - java
+  - repository
+  - search
+  properties:
+  - type: Documentation
+    url: https://central.sonatype.org/search/rest-api-guide/
+  - type: OpenAPI
+    url: https://search.maven.org/api-docs
+  - type: Swagger
+    url: https://search.maven.org/swagger-ui/
+  contact:
+  - FN: Maven Central Support
+    email: central@sonatype.com
+    url: https://central.sonatype.com/
+- name: Maven Repository Manager API
+  description: API for interacting with Maven repository managers like Nexus
+  humanURL: https://www.sonatype.com/products/repository-oss
+  baseURL: https://repository.apache.org
+  tags:
+  - repository
+  - management
+  - artifacts
+  - nexus
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/rest-and-integration-api
+maintainers:
+- FN: Apache Maven Project
+  email: users@maven.apache.org
+  url: https://maven.apache.org/community.html
+common:
+- type: Website
+  url: https://maven.apache.org
+- type: Documentation
+  url: https://maven.apache.org/guides/
+- type: GitHub
+  url: https://github.com/apache/maven
+- type: Downloads
+  url: https://maven.apache.org/download.cgi
+- type: Mailing Lists
+  url: https://maven.apache.org/mailing-lists.html
+- type: Issue Tracker
+  url: https://issues.apache.org/jira/browse/MNG
+include:
+- name: Sonatype Nexus
+  url: https://www.sonatype.com/products/nexus-repository
+- name: JFrog Artifactory
+  url: https://jfrog.com/artifactory/
