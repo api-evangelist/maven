@@ -1,63 +1,66 @@
-name: Maven Central Repository
-description: Maven Central is the default repository for Maven, serving as the primary source for Java libraries and artifacts
-image: https://maven.apache.org/images/maven-logo-black-on-white.png
-url: https://maven.apache.org
-created: '2024'
-modified: '2024'
+aid: maven
+name: Maven
+description: >-
+  Apache Maven is a software project management and build automation tool used
+  primarily for Java projects. Maven Central is the default artifact repository
+  for Maven, and Sonatype provides REST APIs for searching and publishing
+  artifacts to Maven Central.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/apis.yml
+tags:
+  - Java
+  - Maven
+  - Build Tools
+  - Package Management
+  - Artifacts
+  - Repository
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
-- name: Maven Central Search API
-  description: REST API for searching and retrieving artifact information from Maven Central Repository
-  image: https://maven.apache.org/images/maven-logo-black-on-white.png
-  humanURL: https://central.sonatype.com/
-  baseURL: https://search.maven.org/solrsearch
-  tags:
-  - artifacts
-  - dependencies
-  - java
-  - repository
-  - search
-  properties:
-  - type: Documentation
-    url: https://central.sonatype.org/search/rest-api-guide/
-  - type: OpenAPI
-    url: https://search.maven.org/api-docs
-  - type: Swagger
-    url: https://search.maven.org/swagger-ui/
-  contact:
-  - FN: Maven Central Support
-    email: central@sonatype.com
-    url: https://central.sonatype.com/
-- name: Maven Repository Manager API
-  description: API for interacting with Maven repository managers like Nexus
-  humanURL: https://www.sonatype.com/products/repository-oss
-  baseURL: https://repository.apache.org
-  tags:
-  - repository
-  - management
-  - artifacts
-  - nexus
-  properties:
-  - type: Documentation
-    url: https://help.sonatype.com/repomanager3/rest-and-integration-api
-maintainers:
-- FN: Apache Maven Project
-  email: users@maven.apache.org
-  url: https://maven.apache.org/community.html
+  - aid: maven:maven-central-search-api
+    name: Maven Central Search API
+    description: >-
+      REST API for searching and retrieving artifact metadata from Maven
+      Central Repository. Supports Solr-based queries for finding Java
+      libraries and their versions.
+    humanURL: https://central.sonatype.com/
+    baseURL: https://search.maven.org/solrsearch
+    tags:
+      - Search
+      - Artifacts
+      - Java
+    properties:
+      - type: Documentation
+        url: https://central.sonatype.org/search/rest-api-guide/
+  - aid: maven:maven-central-portal-api
+    name: Maven Central Portal Publishing API
+    description: >-
+      API for publishing artifacts to Maven Central through the Sonatype
+      Central Portal. Supports automated deployment of Java libraries and
+      other JVM-based artifacts.
+    humanURL: https://central.sonatype.com/
+    baseURL: https://central.sonatype.com/api/v1
+    tags:
+      - Publishing
+      - Upload
+      - Deployment
+    properties:
+      - type: Documentation
+        url: https://central.sonatype.org/publish/publish-portal-api/
+      - type: Authentication
+        url: https://central.sonatype.org/publish/generate-token/
 common:
-- type: Website
-  url: https://maven.apache.org
-- type: Documentation
-  url: https://maven.apache.org/guides/
-- type: GitHub
-  url: https://github.com/apache/maven
-- type: Downloads
-  url: https://maven.apache.org/download.cgi
-- type: Mailing Lists
-  url: https://maven.apache.org/mailing-lists.html
-- type: Issue Tracker
-  url: https://issues.apache.org/jira/browse/MNG
-include:
-- name: Sonatype Nexus
-  url: https://www.sonatype.com/products/nexus-repository
-- name: JFrog Artifactory
-  url: https://jfrog.com/artifactory/
+  - type: Website
+    url: https://maven.apache.org
+  - type: Documentation
+    url: https://maven.apache.org/guides/
+  - type: GitHub Organization
+    url: https://github.com/apache/maven
+  - type: Support
+    url: https://maven.apache.org/mailing-lists.html
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
