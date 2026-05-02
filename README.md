@@ -1,56 +1,63 @@
-# Maven Central Repository (maven)
-Maven Central is the default repository for Maven, serving as the primary source for Java libraries and artifacts
+# Maven (maven)
 
-**URL:** [Visit APIs.json URL](https://maven.apache.org)
+Apache Maven is a software project management and build automation tool used primarily for Java projects. Maven Central is the default artifact repository for Maven, and Sonatype provides REST APIs for searching and publishing artifacts to Maven Central.
+
+**URL:** [https://maven.apache.org](https://maven.apache.org)
+
+## Tags
+
+- Artifacts, Build Tools, Java, Maven, Package Management, Repository
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Maven Central Search API
-REST API for searching and retrieving artifact information from Maven Central Repository
+
+REST API for searching and retrieving artifact metadata from Maven Central Repository. Supports Solr-based queries for finding Java libraries and their versions.
 
 **Human URL:** [https://central.sonatype.com/](https://central.sonatype.com/)
 
+**Base URL:** `https://search.maven.org/solrsearch`
 
-#### Tags:
+#### Tags
 
- - artifacts, dependencies, java, repository, search
+- Artifacts, Java, Search
 
 #### Properties
 
 - [Documentation](https://central.sonatype.org/search/rest-api-guide/)
-- [OpenAPI](https://search.maven.org/api-docs)
-- [Swagger](https://search.maven.org/swagger-ui/)
+- [OpenAPI](openapi/maven-search-openapi.yml)
 
-### Maven Repository Manager API
-API for interacting with Maven repository managers like Nexus
+### Maven Central Portal Publishing API
 
-**Human URL:** [https://www.sonatype.com/products/repository-oss](https://www.sonatype.com/products/repository-oss)
+API for publishing artifacts to Maven Central through the Sonatype Central Portal. Supports automated deployment of Java libraries and other JVM-based artifacts.
 
+**Human URL:** [https://central.sonatype.com/](https://central.sonatype.com/)
 
-#### Tags:
+**Base URL:** `https://central.sonatype.com/api/v1`
 
- - repository, management, artifacts, nexus
+#### Tags
+
+- Deployment, Publishing, Upload
 
 #### Properties
 
-- [Documentation](https://help.sonatype.com/repomanager3/rest-and-integration-api)
+- [Documentation](https://central.sonatype.org/publish/publish-portal-api/)
+- [Authentication](https://central.sonatype.org/publish/generate-token/)
+- [OpenAPI](openapi/maven-portal-openapi.yml)
 
 ## Common Properties
 
 - [Website](https://maven.apache.org)
 - [Documentation](https://maven.apache.org/guides/)
-- [GitHub](https://github.com/apache/maven)
-- [Downloads](https://maven.apache.org/download.cgi)
-- [Mailing Lists](https://maven.apache.org/mailing-lists.html)
-- [Issue Tracker](https://issues.apache.org/jira/browse/MNG)
+- [GitHub Organization](https://github.com/apache/maven)
+- [Support](https://maven.apache.org/mailing-lists.html)
 
 ## Maintainers
 
-**FN:** Apache Maven Project
-
-**Email:** users@maven.apache.org
+- **FN:** Kin Lane
+- **Email:** kin@apievangelist.com
