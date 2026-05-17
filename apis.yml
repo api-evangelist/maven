@@ -63,7 +63,7 @@ common:
     url: https://maven.apache.org
   - type: Documentation
     url: https://maven.apache.org/guides/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/apache/maven
   - type: Support
     url: https://maven.apache.org/mailing-lists.html
