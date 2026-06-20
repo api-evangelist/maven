@@ -5,7 +5,7 @@ description: >-
   Central is the default artifact repository for Maven, and Sonatype provides REST APIs for searching and publishing
   artifacts to Maven Central.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/apis.yml
 tags:
   - Artifacts
