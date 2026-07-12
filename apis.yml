@@ -53,6 +53,12 @@ apis:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/openapi/maven-portal-openapi.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/maven-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/maven-domain-security.yml
+  - type: Authentication
+    url: authentication/maven-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/maven-hq
   - type: Website
