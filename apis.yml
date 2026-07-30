@@ -5,7 +5,20 @@ description: >-
   Central is the default artifact repository for Maven, and Sonatype provides REST APIs for searching and publishing
   artifacts to Maven Central.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/maven.png
 url: https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/apis.yml
 tags:
   - Artifacts
@@ -18,40 +31,54 @@ created: '2024-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: maven:maven-central-search-api
-    name: Maven Central Search API
-    description: >-
-      REST API for searching and retrieving artifact metadata from Maven Central Repository. Supports Solr-based queries
-      for finding Java libraries and their versions.
-    humanURL: https://central.sonatype.com/
-    baseURL: https://search.maven.org/solrsearch
-    tags:
-      - Artifacts
-      - Java
-      - Search
-    properties:
-      - type: Documentation
-        url: https://central.sonatype.org/search/rest-api-guide/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/openapi/maven-search-openapi.yml
-  - aid: maven:maven-central-portal-api
-    name: Maven Central Portal Publishing API
-    description: >-
-      API for publishing artifacts to Maven Central through the Sonatype Central Portal. Supports automated deployment
-      of Java libraries and other JVM-based artifacts.
-    humanURL: https://central.sonatype.com/
-    baseURL: https://central.sonatype.com/api/v1
-    tags:
-      - Deployment
-      - Publishing
-      - Upload
-    properties:
-      - type: Documentation
-        url: https://central.sonatype.org/publish/publish-portal-api/
-      - type: Authentication
-        url: https://central.sonatype.org/publish/generate-token/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/openapi/maven-portal-openapi.yml
+- aid: maven:maven-deployment-api
+  name: Maven Deployment API
+  description: The Deployment API from Maven — 5 operation(s) for deployment.
+  humanURL: https://central.sonatype.com/
+  baseURL: https://search.maven.org/solrsearch
+  tags:
+  - Deployment
+  properties:
+  - type: OpenAPI
+    url: openapi/maven-deployment-api-openapi.yml
+  - type: Documentation
+    url: https://central.sonatype.org/search/rest-api-guide/
+  - type: Documentation
+    url: https://central.sonatype.org/publish/publish-portal-api/
+  - type: Authentication
+    url: https://central.sonatype.org/publish/generate-token/
+- aid: maven:maven-download-api
+  name: Maven Download API
+  description: The Download API from Maven — 1 operation(s) for download.
+  humanURL: https://central.sonatype.com/
+  baseURL: https://search.maven.org/solrsearch
+  tags:
+  - Download
+  properties:
+  - type: OpenAPI
+    url: openapi/maven-download-api-openapi.yml
+  - type: Documentation
+    url: https://central.sonatype.org/search/rest-api-guide/
+  - type: Documentation
+    url: https://central.sonatype.org/publish/publish-portal-api/
+  - type: Authentication
+    url: https://central.sonatype.org/publish/generate-token/
+- aid: maven:maven-search-api
+  name: Maven Search API
+  description: The Search API from Maven — 1 operation(s) for search.
+  humanURL: https://central.sonatype.com/
+  baseURL: https://search.maven.org/solrsearch
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/maven-search-api-openapi.yml
+  - type: Documentation
+    url: https://central.sonatype.org/search/rest-api-guide/
+  - type: Documentation
+    url: https://central.sonatype.org/publish/publish-portal-api/
+  - type: Authentication
+    url: https://central.sonatype.org/publish/generate-token/
 common:
   - type: AgenticAccess
     url: agentic-access/maven-agentic-access.yml
