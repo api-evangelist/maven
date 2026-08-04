@@ -1,0 +1,18 @@
+{
+  "provider": "maven",
+  "sources": [
+    "maven-deployment-api-openapi.yml",
+    "maven-download-api-openapi.yml",
+    "maven-search-api-openapi.yml"
+  ],
+  "outputs": [
+    "maven-deployment-api-openapi.yml",
+    "maven-download-api-openapi.yml",
+    "maven-search-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
