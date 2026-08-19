@@ -1,0 +1,171 @@
+{
+  "item": [
+    {
+      "id": "26398875-1fef-4632-ae05-d142ce3d0ae7",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5055af11-fc75-4c0e-93e1-8534960c899d",
+          "name": "Search Maven Central",
+          "request": {
+            "name": "Search Maven Central",
+            "description": {
+              "content": "Execute a Solr query against Maven Central. Use the `q` parameter with Solr field syntax to filter by groupId (`g:`), artifactId (`a:`), version (`v:`), classname (`c:`), fully-qualified classname (`fc:`), SHA-1 checksum (`1:`), or tags (`tags:`).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "select"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Solr query string."
+                },
+                {
+                  "disabled": false,
+                  "key": "rows",
+                  "value": "20",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "0",
+                  "description": "Result offset for pagination."
+                },
+                {
+                  "disabled": false,
+                  "key": "wt",
+                  "value": "json",
+                  "description": "Response format."
+                },
+                {
+                  "disabled": false,
+                  "key": "core",
+                  "value": "<string>",
+                  "description": "Specific Solr core to search (for example, `gav` to list versions)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2013ef45-e6db-4d06-a5e6-fa229999483b",
+              "name": "Search results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "select"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "g:com.google.inject+AND+a:guice"
+                    },
+                    {
+                      "key": "rows",
+                      "value": "20"
+                    },
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "wt",
+                      "value": "json"
+                    },
+                    {
+                      "key": "core",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"responseHeader\": {\n    \"status\": 1867,\n    \"QTime\": 4806,\n    \"params\": {\n      \"key_0\": \"string\"\n    }\n  },\n  \"response\": {\n    \"numFound\": 8622,\n    \"start\": 6327,\n    \"docs\": [\n      {\n        \"id\": \"string\",\n        \"g\": \"string\",\n        \"a\": \"string\",\n        \"v\": \"string\",\n        \"latestVersion\": \"string\",\n        \"repositoryId\": \"string\",\n        \"p\": \"string\",\n        \"timestamp\": 4308,\n        \"versionCount\": 6507,\n        \"ec\": [\n          \"string\",\n          \"string\"\n        ],\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"id\": \"string\",\n        \"g\": \"string\",\n        \"a\": \"string\",\n        \"v\": \"string\",\n        \"latestVersion\": \"string\",\n        \"repositoryId\": \"string\",\n        \"p\": \"string\",\n        \"timestamp\": 8460,\n        \"versionCount\": 9347,\n        \"ec\": [\n          \"string\",\n          \"string\"\n        ],\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://central.sonatype.com/api/v1/publisher",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f552f432-4b1e-413b-95d6-e5c2d692b22b",
+    "name": "Sonatype Central Portal Publishing Deployment Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for uploading, validating, publishing, and dropping deployment bundles on the Sonatype Central Portal. Replaces the legacy OSSRH staging workflow for releasing open source libraries to Maven Central.\n\nContact Support:\n Name: Sonatype Central",
+      "type": "text/plain"
+    }
+  }
+}
