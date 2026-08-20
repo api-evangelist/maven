@@ -53,6 +53,8 @@ apis:
   humanURL: https://central.sonatype.com/
   baseURL: https://search.maven.org/solrsearch
   tags:
+  - Downloads
+  tags_raw:
   - Download
   properties:
   - type: OpenAPI
