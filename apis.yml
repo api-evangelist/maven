@@ -35,6 +35,7 @@ url: https://raw.githubusercontent.com/api-evangelist/maven/refs/heads/main/apis
 tags:
   - Artifacts
   - Build Tools
+  - Developer Tools
   - Java
   - Maven
   - Package Management
