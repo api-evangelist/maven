@@ -18,7 +18,8 @@
     "maven-portal-openapi.yml: declared missing tag: Deployment",
     "maven-search-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
     "maven-search-openapi.yml: declared missing tag: Download",
-    "maven-search-openapi.yml: declared missing tag: Search"
+    "maven-search-openapi.yml: declared missing tag: Search",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "maven-deployment-api-openapi.yml: previously refined output, superseded by openapi/_original/",
