@@ -95,6 +95,9 @@ apis:
   - type: Authentication
     url: https://central.sonatype.org/publish/generate-token/
 common:
+  - type: CapabilityMap
+    url: capabilities/maven-capability-edges.yml
+    name: Maven Business Capability Map
   - type: AgenticAccess
     url: agentic-access/maven-agentic-access.yml
   - type: VulnerabilityDisclosure
