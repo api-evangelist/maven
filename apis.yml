@@ -95,6 +95,12 @@ apis:
   - type: Authentication
     url: https://central.sonatype.org/publish/generate-token/
 common:
+  - type: Plans
+    url: plans/maven-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/maven-rate-limits.yml
+  - type: FinOps
+    url: finops/maven-finops.yml
   - type: CapabilityMap
     url: capabilities/maven-capability-edges.yml
     name: Maven Business Capability Map
